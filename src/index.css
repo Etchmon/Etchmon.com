@@ -11,6 +11,21 @@ main {
   background-position: center;
   position: relative;
   z-index: 2;
+  transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
+}
+
+main:not([data-nav="true"]) > #nav-toggle:hover > .open {
+  opacity: 1;
+  transform: translate(-50%, 50%) scale(1);
+}
+
+main[data-nav="true"]> #nav-toggle > .close {
+  opacity: 1;
+  transform: translate(-50%, 50%) scale(1);
+}
+
+main[data-nav="true"] > main {
+  transform:translateY(-50%);
 }
 
 #nav-toggle {
@@ -38,6 +53,19 @@ main {
 
 #nav-toggle:active {
   transform: translateX(-50%) scale(0.96);
+}
+
+#nav-toggle > i {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  color: rgb(249. 231. 224);
+  font-size: 1.75rem;
+  opacity: 0;
+  transition: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
 }
 
 code {
