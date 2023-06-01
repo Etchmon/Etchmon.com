@@ -17,7 +17,14 @@ function App() {
 
   return (
     <section data-nav="false">
-      <main></main>
+      <main>
+        <header>
+          <h1><span>James</span> Etchells</h1>
+          <h3>Full-Stack Developer</h3>
+        </header>
+        <div></div>
+      </main>
+
       <nav id='nav'>
         <div id='nav-links' className='scrollbar-hidden' onWheel={handleWheel} ref={scrollableRef}>
           <a className='nav-link' href="#">
