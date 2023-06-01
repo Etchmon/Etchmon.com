@@ -5,27 +5,30 @@ body, main {
   background-color: black;
 }
 
+body:not([data-nav="true"]) > #root > section > #nav-toggle:hover > .open {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+body[data-nav="true"] > #root > section > #nav-toggle > .close {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+body[data-nav="true"] > #root > section {
+  transform: translateY(-50%);
+}
+
+section {
+  transition: transform 500ms cubic-bezier(.13, .53, .38, .97);
+}
+
 main {
   background-image: url('../public/images/img.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
   z-index: 2;
-  transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
-}
-
-main:not([data-nav="true"]) > #nav-toggle:hover > .open {
-  opacity: 1;
-  transform: translate(-50%, 50%) scale(1);
-}
-
-main[data-nav="true"]> #nav-toggle > .close {
-  opacity: 1;
-  transform: translate(-50%, 50%) scale(1);
-}
-
-main[data-nav="true"] > main {
-  transform:translateY(-50%);
 }
 
 #nav-toggle {
@@ -55,12 +58,12 @@ main[data-nav="true"] > main {
   transform: translateX(-50%) scale(0.96);
 }
 
-#nav-toggle > i {
+#nav-toggle > .i {
   position: absolute;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  color: rgb(249. 231. 224);
+  color: rgb(249, 231, 224);
   font-size: 1.75rem;
   opacity: 0;
   transition: transform, opacity;
