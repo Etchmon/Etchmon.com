@@ -23,13 +23,13 @@ function App() {
           <h3>Full-Stack Software Engineer</h3>
           <ul>
             <li>
-              <a>Github</a>
+              <a href='https://github.com/Etchmon' target='_blank'>Github</a>
             </li>
             <li>
-              <a>LinkedIn</a>
+              <a href='https://www.linkedin.com/in/james-etchells-240816164/' target='_blank'>LinkedIn</a>
             </li>
             <li>
-              <a>Email</a>
+              <a href='mailto:jaw.etch@gmail.com' target='_blank'>Email</a>
             </li>
           </ul>
         </header>
