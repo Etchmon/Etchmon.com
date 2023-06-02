@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import imgSrc from '../src/keira.jpg';
+import imgSrc from '../src/images/keira.jpg';
 
 function App() {
 
@@ -20,7 +20,18 @@ function App() {
       <main>
         <header>
           <h1><span>James</span> Etchells</h1>
-          <h3>Full-Stack Developer</h3>
+          <h3>Full-Stack Software Engineer</h3>
+          <ul>
+            <li>
+              <a>Github</a>
+            </li>
+            <li>
+              <a>LinkedIn</a>
+            </li>
+            <li>
+              <a>Email</a>
+            </li>
+          </ul>
         </header>
         <div></div>
       </main>
@@ -32,19 +43,19 @@ function App() {
             <img className='nav-link-image' src={imgSrc} />
           </a>
           <a className='nav-link' href="#">
+            <h2 className='nav-link-label'>Skills</h2>
+            <img className='nav-link-image' src={imgSrc} />
+          </a>
+          <a className='nav-link' href="#">
+            <h2 className='nav-link-label'>Projects</h2>
+            <img className='nav-link-image' src={imgSrc} />
+          </a>
+          <a className='nav-link' href="#">
             <h2 className='nav-link-label'>Resume</h2>
             <img className='nav-link-image' src={imgSrc} />
           </a>
           <a className='nav-link' href="#">
-            <h2 className='nav-link-label'>Projects</h2>
-            <img className='nav-link-image' src={imgSrc} />
-          </a>
-          <a className='nav-link' href="#">
-            <h2 className='nav-link-label'>Projects</h2>
-            <img className='nav-link-image' src={imgSrc} />
-          </a>
-          <a className='nav-link' href="#">
-            <h2 className='nav-link-label'>Projects</h2>
+            <h2 className='nav-link-label'>About</h2>
             <img className='nav-link-image' src={imgSrc} />
           </a>
         </div>
