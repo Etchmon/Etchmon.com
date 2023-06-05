@@ -3,6 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import imgSrc from '../src/images/keira.jpg';
 import Home from '../src/components/home';
+import Skills from '../src/components/skills';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
       case 'home':
         return <Home />
       case 'skills':
-        return // skills page
+        return <Skills />
       case 'projects':
         return // projects page
       case 'resume':
@@ -36,7 +37,10 @@ function App() {
 
   return (
     <section data-nav="false">
-      {renderComponent()}
+      <main>
+        {renderComponent()}
+        <div></div>
+      </main>
 
       <nav id='nav'>
         <div id='nav-links' className='scrollbar-hidden' onWheel={handleWheel} ref={scrollableRef}>

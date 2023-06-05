@@ -201,6 +201,70 @@ main > div {
   object-fit: cover;
 }
 
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+}
+
+section > h1 {
+  font-size: 5rem;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0px 0px 0.5rem white;
+  text-align: center;
+}
+
+section > h1:before,
+section > h1:after {
+  content: "";
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+section > h1:before {
+  top: 10%;
+  left: 30%;
+}
+
+section > h1:after {
+  top: 10%;
+  right: 30%;
+}
+
+section > div {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+section > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+section > div > div > ul {
+  list-style: none;
+  text-align: starts;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section > div > div > ul > li {
+  padding: 1rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
