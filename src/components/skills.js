@@ -16,7 +16,6 @@ const Skills = () => {
                         <li>Redux</li>
                         <li>Next.js</li>
                         <li>Tailwind</li>
-                        <li>BootStrap</li>
                     </ul>
                 </div>
                 <div>
@@ -24,8 +23,6 @@ const Skills = () => {
                     <ul>
                         <li>Node</li>
                         <li>Express</li>
-                        <li>Sequalize ORM</li>
-                        <li>PostgreSQL</li>
                         <li>RESTful API</li>
                         <li>MongoDb</li>
                     </ul>

@@ -4,6 +4,7 @@ const Home = () => {
 
     return (
         <header>
+            <span>I AM</span>
             <h1><span>James</span> Etchells</h1>
             <h3>Full-Stack Software Engineer</h3>
             <ul>

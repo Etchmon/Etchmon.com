@@ -36,7 +36,7 @@ const Projects = () => {
             <div className="three">
                 <h1>Weather App</h1>
                 <div>
-                    <p>A web application that provides real-time weather information for various locations. It allows users to search for a specific location and view the current weather conditions as well as the forecast for the upcoming days.</p>
+                    <p>A web application that provides real-time weather information for various locations using the OpenWeatherAPI. It allows users to search for a specific location and view the current weather conditions as well as the forecast for the upcoming days.</p>
                     <div>
                         <a>
                             Code
