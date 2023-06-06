@@ -4,6 +4,7 @@ body, main {
   margin: 0px;
   background-color: black;
   overflow: hidden;
+  font-family: "Source Code Pro", monospace;
 }
 
 body:not([data-nav="true"]) > #root > section > #nav-toggle:hover > .open {
@@ -29,7 +30,6 @@ main {
   background-size: cover;
   background-position: center;
   background-size: 300%;
-  filter: sepia(100%) hue-rotate(170deg);
   position: relative;
   z-index: 2;
   transition: transform 500ms cubic-bezier(.13, .53, .38, .97);
@@ -51,14 +51,16 @@ main > header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-family: "Source Code Pro", monospace;
+  align-items: start;
+  
   white-space: nowrap;
   text-align: center;
 }
 
 main > header > span {
-  font-size: 5rem;
+  font-size: 2rem;
+  text-align: start;
+  width: 100%;
 }
 
 main > header > h1 {
@@ -80,12 +82,12 @@ main > header > h1:after {
 }
 
 main > header > h1:before {
-  top: 45%;
+  top: 30%;
   left: 1.5rem;
 }
 
 main > header > h1:after {
-  top: 45%;
+  top: 30%;
   right: 1.5rem;
 }
 
@@ -95,6 +97,7 @@ main > header > ul {
   align-items: center;
   gap: 1rem;
   padding: 0;
+  font-size: .8rem;
 }
 
 main > header > ul > li {
@@ -104,11 +107,27 @@ main > header > ul > li {
 main > header > ul > li > a {
   text-decoration: none;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main > header > ul > li > a:hover {
+  transform: scale(1.2);
+  transition: transform .2s ease-in-out;
+}
+
+main > header > ul > li > a > svg,
+main > header > ul > li > a > svg > path {
+  height: 40px;
+  width: 40px;
+  padding: 1rem;
 }
 
 main > .bg-overlay {
   background-color: rgb(32,39,49);
-  opacity: .9;
+  opacity: .8;
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -209,10 +228,12 @@ main > .bg-overlay {
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
   z-index: 3;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   padding: 3rem 0;
+  margin: 1rem;
 }
 
 .skills > h1 {
@@ -224,31 +245,10 @@ main > .bg-overlay {
   text-align: center;
 }
 
-.skills > h1:before,
-.skills > h1:after {
-  content: "";
-  height: 4px;
-  width: 4px;
-  position: absolute;
-  border: 2px solid white;
-  border-radius: 2px;
-}
-
-.skills > h1:before {
-  top: 20%;
-  left: 37.5%;
-}
-
-.skills > h1:after {
-  top: 20%;
-  right: 38%;
-}
-
 .skills > div {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
-  margin: 0 20%;
   border-top: 2px solid white;
 }
 
@@ -257,6 +257,7 @@ main > .bg-overlay {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  border: 1px solid white;
 }
 
 .skills > div > div > ul {
@@ -271,6 +272,14 @@ main > .bg-overlay {
 
 .skills > div > div > ul > li {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills > div > div > ul > li > svg {
+  height: 50px;
+  width: 50px;
 }
 
 .projects {
@@ -278,21 +287,19 @@ main > .bg-overlay {
   min-width: 100vw;
   display: grid;
   position: relative;
+  filter: none;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   z-index: 3;
   padding: 1rem;
   text-align: center;
-  border-radius: 2rem;
-  background-color: black;
 }
 
 .projects > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 1.5;
-  font-size: 1.2rem;
+  line-height: 1.2;
 }
 
 .projects > h1 {
@@ -306,11 +313,14 @@ main > .bg-overlay {
   text-shadow: 0px 0px 0.5rem white;
   border: 2px solid white;
   padding: 2rem;
+  z-index: 4;
 }
+
 
 .projects > div > div {
   position: absolute;
-  display: block;
+  display: flex;
+  flex-direction: column;
   opacity: 0;
   margin: 2rem;
   color: white;
@@ -333,42 +343,107 @@ main > .bg-overlay {
   transition: transform, opacity;
   transition-timing-function: ease;
   transition-duration: 900ms;
+  font-size: 1.1rem;
 }
 
-.projects > div > div > p {
-  color: white;
+.projects > div > div > .svgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projects > div > div > .svgs > svg {
+  height: 50px;
+  width: 50px;
+  margin: 0 1rem;
+}
+
+.projects > div > div > div {
+  margin: 1rem;
 }
 
 .projects > div > div > div > a {
   padding: 1rem 2rem;
-  background-color: rgb(33, 155, 243);
-  filter: sepia(0%);
-  margin: 1rem;
+  background-color: white;
+  color: black;
+  margin: 2rem;
   z-index: 3;
 }
 
 .projects > div > div > div > a:hover {
+  opacity: .5;
+}
+
+.projects > .one {
+  background-image: url('../src/images/nextjs-cookbook-5eel0530o-etchmon.vercel.app_.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 3;
   opacity: .9;
 }
 
 .projects > .one:hover {
   border-right: 2px solid white;
   border-bottom: 2px solid white;
+  background-image: none;
+  background-color: black;
+}
+
+.projects > .two {
+  background-image: url('../src/images/etchmon.github.io_shopping-cart_.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 3;
+  opacity: .9;
 }
 
 .projects > .two:hover {
   border-left: 2px solid white;
   border-bottom: 2px solid white;
+  background-image: none;
+  background-color: black;
+}
+
+.projects > .three {
+  background-image: url('../src/images/etchmon.github.io_weather-app_.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 3;
+  opacity: .9;
 }
 
 .projects > .three:hover {
   border-right: 2px solid white;
   border-top: 2px solid white;
+  background-image: none;
+  background-color: black;
+}
+
+.projects > .four {
+  background-image: url('../src/images/etchmon.github.io_cv-application_.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 3;
+  opacity: .9;
 }
 
 .projects > .four:hover {
   border-left: 2px solid white;
   border-top: 2px solid white;
+  background-image: none;
+  background-color: black;
+}
+
+.resume {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 3;
 }
 
 code {

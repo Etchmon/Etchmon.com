@@ -11,7 +11,12 @@ function App() {
   const scrollableRef = useRef(null);
   const [activeComponent, setActiveComponent] = useState('home');
 
+  const toggleNav = () => {
+    document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
+  };
+
   const renderComponent = () => {
+    document.body.dataset.nav = "false";
     switch (activeComponent) {
       case 'home':
         return <Home />
@@ -19,18 +24,12 @@ function App() {
         return <Skills />
       case 'projects':
         return <Projects />
-      case 'resume':
-        return // resume
       case 'about':
         return // about
       default:
         return null;
-    }
+    };
   }
-
-  const toggleNav = () => {
-    document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
-  };
 
   const handleWheel = (event) => {
     scrollableRef.current.scrollLeft += event.deltaY + event.deltaX;
@@ -57,11 +56,7 @@ function App() {
             <h2 className='nav-link-label'>Projects</h2>
             <img className='nav-link-image' src={imgSrc} />
           </a>
-          <a className='nav-link' onClick={() => setActiveComponent('resume')}>
-            <h2 className='nav-link-label'>Resume</h2>
-            <img className='nav-link-image' src={imgSrc} />
-          </a>
-          <a className='nav-link' onClick={() => setActiveComponent('about')}>
+          <a className='nav-link' onClick={() => { setActiveComponent('about') }}>
             <h2 className='nav-link-label'>About</h2>
             <img className='nav-link-image' src={imgSrc} />
           </a>
