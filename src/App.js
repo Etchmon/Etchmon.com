@@ -4,6 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import imgSrc from '../src/images/keira.jpg';
 import Home from '../src/components/home';
 import Skills from '../src/components/skills';
+import Projects from './components/projects';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       case 'skills':
         return <Skills />
       case 'projects':
-        return // projects page
+        return <Projects />
       case 'resume':
         return // resume
       case 'about':
@@ -39,7 +40,7 @@ function App() {
     <section data-nav="false">
       <main>
         {renderComponent()}
-        <div></div>
+        <div className='bg-overlay'></div>
       </main>
 
       <nav id='nav'>
