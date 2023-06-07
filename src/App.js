@@ -5,6 +5,7 @@ import imgSrc from '../src/images/keira.jpg';
 import Home from '../src/components/home';
 import Skills from '../src/components/skills';
 import Projects from './components/projects';
+import About from './components/about';
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
       case 'projects':
         return <Projects />
       case 'about':
-        return // about
+        return <About />
       default:
         return null;
     };
