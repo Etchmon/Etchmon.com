@@ -45,10 +45,10 @@ const Projects = () => {
                     </div>
                     <p>A full-stack application that provides a friendly user interface for creating and editing recipes, cookbooks, and explore recipes from other users. Built using React, Next.js, Tailwind CSS, Node.js, MongoDB and deployed with Vercel. </p>
                     <div>
-                        <a>
+                        <a href="https://github.com/Etchmon/nextjs-cookbook" target="_blank">
                             Code
                         </a>
-                        <a>
+                        <a href="https://nextjs-cookbook-5eel0530o-etchmon.vercel.app/" target="_blank">
                             Link
                         </a>
                     </div>
@@ -63,10 +63,10 @@ const Projects = () => {
                     </div>
                     <p>E-commerce website prototype encompassing a visually appealing landing page, comprehensive product lists, and an efficient shopping cart system. Built using React and Node.js, deployed on github pages.</p>
                     <div>
-                        <a>
+                        <a href="https://github.com/Etchmon/shopping-cart" target="_blank">
                             Code
                         </a>
-                        <a>
+                        <a href="https://etchmon.github.io/shopping-cart/" target="_blank">
                             Link
                         </a>
                     </div>
@@ -83,10 +83,10 @@ const Projects = () => {
                     </div>
                     <p>A web application that provides real-time weather information for various locations using the OpenWeatherAPI. It allows users to search for a specific location and view the current weather conditions as well as the forecast for the upcoming days.</p>
                     <div>
-                        <a>
+                        <a href="https://github.com/Etchmon/weather-app" target="_blank">
                             Code
                         </a>
-                        <a>
+                        <a href="https://etchmon.github.io/weather-app/" target="_blank">
                             Link
                         </a>
                     </div>
@@ -102,10 +102,10 @@ const Projects = () => {
                     </div>
                     <p>A CV application that lets a user input their personal information, education, and work experience then builds a form to display all their information for hiring managers to view.</p>
                     <div>
-                        <a>
+                        <a href="https://github.com/Etchmon/cv-application" target="_blank">
                             Code
                         </a>
-                        <a>
+                        <a href="https://etchmon.github.io/cv-application/" target="_blank">
                             Link
                         </a>
                     </div>
