@@ -1,7 +1,10 @@
 import React, { useRef, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import imgSrc from '../src/images/keira.jpg';
+import imgSrc1 from '../src/images/localhost_3000_.png';
+import imgSrc2 from '../src/images/localhost_3000_ (1).png';
+import imgSrc3 from '../src/images/localhost_3000_ (2).png';
+import imgSrc4 from '../src/images/localhost_3000_ (3).png';
 import Home from '../src/components/home';
 import Skills from '../src/components/skills';
 import Projects from './components/projects';
@@ -47,19 +50,19 @@ function App() {
         <div id='nav-links' className='scrollbar-hidden' onWheel={handleWheel} ref={scrollableRef}>
           <a className='nav-link' onClick={() => setActiveComponent('home')}>
             <h2 className='nav-link-label'>Home</h2>
-            <img className='nav-link-image' src={imgSrc} />
+            <img className='nav-link-image' src={imgSrc1} />
           </a>
           <a className='nav-link' onClick={() => setActiveComponent('skills')}>
             <h2 className='nav-link-label'>Skills</h2>
-            <img className='nav-link-image' src={imgSrc} />
+            <img className='nav-link-image' src={imgSrc2} />
           </a>
           <a className='nav-link' onClick={() => setActiveComponent('projects')}>
             <h2 className='nav-link-label'>Projects</h2>
-            <img className='nav-link-image' src={imgSrc} />
+            <img className='nav-link-image' src={imgSrc3} />
           </a>
           <a className='nav-link' onClick={() => { setActiveComponent('about') }}>
             <h2 className='nav-link-label'>About</h2>
-            <img className='nav-link-image' src={imgSrc} />
+            <img className='nav-link-image' src={imgSrc4} />
           </a>
         </div>
       </nav>

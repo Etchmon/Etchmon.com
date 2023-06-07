@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Projects = () => {
 
+    const [scrollSnapped, setScrollSnapped] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollContainer = document.querySelector(".projects");
+            const scrollLeft = scrollContainer.scrollLeft;
+            const scrollWidth = scrollContainer.children[1].scrollWidth;
+            const clientWidth = scrollContainer.clientWidth;
+            console.log(scrollLeft, scrollWidth, clientWidth, (scrollLeft % scrollWidth))
+
+            const hasScrolledToNextElement = (scrollLeft % scrollWidth) < 17;
+
+            setScrollSnapped(hasScrolledToNextElement);
+            console.log(hasScrolledToNextElement)
+        };
+
+        const scrollContainer = document.querySelector(".projects");
+        scrollContainer.addEventListener("scroll", handleScroll);
+
+        return () => {
+            scrollContainer.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <div className="projects">
+        <div className='projects'>
             <h1>Projects</h1>
-            <div className="one">
+            <div className={`one ${scrollSnapped ? "hide-element" : ""}`}>
                 <div>
                     <h1>Digital Cookbook</h1>
                     <div className="svgs">

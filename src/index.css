@@ -154,6 +154,8 @@ main > .bg-overlay {
   padding: 0rem clamp(1rem, 2vw, 2rem);
   transform: translateY(70%) scale(0.9);
   transition: transform 500ms cubic-bezier(.13, .53, .38, .97);
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
@@ -207,6 +209,14 @@ main > .bg-overlay {
 
 #nav-links > .nav-link {
   text-decoration: none;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+#nav-links > .nav-link:hover {
+  transform: scale(.95);
+  transition-timing-function: ease;
+  transition-duration: 400ms;
 }
 
 #nav-links > .nav-link > .nav-link-label {
@@ -400,7 +410,7 @@ main > .bg-overlay {
 }
 
 .projects > div > div > div > a {
-  padding: 1rem 2rem;
+  padding: .5rem 1rem;
   background-color: white;
   color: black;
   margin: 2rem;
@@ -486,6 +496,11 @@ main > .bg-overlay {
   z-index: 3;
 }
 
+.hide-element {
+  opacity: 0;
+  display: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -555,6 +570,180 @@ code {
 
   100% {
     box-shadow: 0 0 0 0 rgba(0, 191, 165, 0);
+  }
+}
+
+@media (max-width: 1600px) {
+  .projects > div:hover > div {
+    font-size: 1rem;
+  }
+
+  .projects > div > div > .svgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .projects > div > div > .svgs > svg {
+    height: 35px;
+    width: 35px;
+    margin: 0 .5rem;
+  }
+
+  .projects > div > div > div {
+    margin: .3rem;
+  }
+
+  .about {
+    margin: 0 5%;
+  }
+
+}
+
+@media (max-width: 900px) {
+  main {
+    font-size: .8rem;
+  }
+
+  main > header > h1 {
+    font-size: 3rem;
+  }
+
+  main > header > span {
+    font-size: 1.5rem;
+  }
+
+  main > header > ul > li > a > svg,
+  main > header > ul > li > a > svg > path {
+    height: 30px;
+    width: 30px;
+    padding: 1rem;
+  }
+
+  .skills {
+    justify-content: start;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .projects > div:hover > div {
+    font-size: .8rem;
+  }
+
+  .projects > div > div > .svgs > svg {
+    height: 20px;
+    width: 20px;
+    margin: 0 .3rem;
+  }
+
+  .projects > div > div > div {
+    margin: .3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    font-size: .7rem;
+    overflow: hidden;
+  }
+
+  #nav-links > .nav-link > .nav-link-label {
+    margin-left: 1rem;
+  }
+
+  main > header > h1 {
+    font-size: 2.3rem;
+  }
+
+  main > header > h1:before {
+    top: 35%;
+    left: 2.2rem;
+  }
+
+  main > header > h1:after {
+    top: 35%;
+    right: 2.5rem;
+  }
+
+  main > header > span {
+    font-size:1.8rem;
+  }
+
+  main > header > ul {
+    margin: 0;
+    display: flex;
+  }
+
+  main > header > ul > li > a > svg,
+  main > header > ul > li > a > svg > path {
+    height: 30px;
+    width: 30px;
+    padding: .3rem;
+  }
+
+  .skills {
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .skills > h1 {
+    font-size: 3rem;
+  }
+
+  .projects {
+    grid-template-columns: repeat(4, 100vw);
+    grid-template-rows: 1fr;
+    height: 80vh;
+    padding-bottom: 12rem;
+    width: 100vw;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .projects > .one,
+  .projects > .two, 
+  .projects > .three,
+  .projects > .four {
+    border-radius: 0rem;
+    scroll-snap-align: start;
+    padding: 0 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .projects > .one:hover,
+  .projects > .two:hover, 
+  .projects > .three:hover,
+  .projects > .four:hover {
+    background-color: trasnparent;
+    border: none;
+  }
+  
+
+  .projects > h1 {
+    opacity: 1;
+    top: 10%;
+    left: 50%;
+    position: fixed;
+  }
+
+  .projects > div:hover > div {
+    font-size: 1rem;
+  }
+
+  .projects > div > div > .svgs > svg {
+    height: 30px;
+    width: 30px;
+    margin: 0 .2rem;
+  }
+
+  .projects > div > div > div {
+    margin: .3rem;
   }
 }
 
