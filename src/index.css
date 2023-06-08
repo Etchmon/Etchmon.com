@@ -26,7 +26,7 @@ body[data-nav="true"] > #root > section > nav > #nav-links {
 }
 
 main {
-  background-image: url('../src/images/simon-fitall-tvleqH3p1os-unsplash.jpg');
+  background-image: url('../src/images/bg-img.jpg');
   background-size: cover;
   background-position: center;
   background-size: 300%;
@@ -51,7 +51,7 @@ main > header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   
   white-space: nowrap;
   text-align: center;
@@ -59,7 +59,7 @@ main > header {
 
 main > header > span {
   font-size: 2rem;
-  text-align: start;
+  text-align: flex-start;
   width: 100%;
 }
 
@@ -210,7 +210,6 @@ main > .bg-overlay {
 #nav-links > .nav-link {
   text-decoration: none;
   cursor: pointer;
-  scroll-snap-align: start;
 }
 
 #nav-links > .nav-link:hover {
@@ -249,7 +248,7 @@ main > .bg-overlay {
   font-size: 5rem;
   letter-spacing: .5rem;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   text-transform: uppercase;
   margin: 0;
@@ -277,7 +276,7 @@ main > .bg-overlay {
   height: 100%;
   z-index: 3;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   padding: 3rem 0;
   margin: 1rem;
 }
@@ -308,7 +307,7 @@ main > .bg-overlay {
 
 .skills > div > div > ul {
   list-style: none;
-  text-align: starts;
+  text-align: start;
   padding: 0;
   margin: 0;
   display: flex;
@@ -622,7 +621,7 @@ code {
   }
 
   .skills {
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .about {
@@ -648,6 +647,10 @@ code {
   main {
     font-size: .7rem;
     overflow: hidden;
+  }
+
+  #nav-links > .nav-link {
+    scroll-snap-align: start;
   }
 
   #nav-links > .nav-link > .nav-link-label {
