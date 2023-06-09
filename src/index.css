@@ -1,27 +1,33 @@
-body, main {
+#root {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+body,
+main {
   height: 100vh;
   width: 100vw;
   margin: 0px;
   background-color: black;
   overflow: hidden;
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
 }
 
-body:not([data-nav="true"]) > #root > section > #nav-toggle:hover > .open {
+body:not([data-nav='true']) > #root > section > #nav-toggle:hover > .open {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
 
-body[data-nav="true"] > #root > section > #nav-toggle > .close {
+body[data-nav='true'] > #root > section > #nav-toggle > .close {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
 
-body[data-nav="true"] > #root > section > main {
+body[data-nav='true'] > #root > section > main {
   transform: translateY(-50%);
 }
 
-body[data-nav="true"] > #root > section > nav > #nav-links {
+body[data-nav='true'] > #root > section > nav > #nav-links {
   transform: translateY(0%) scale(1);
 }
 
@@ -32,7 +38,7 @@ main {
   background-size: 300%;
   position: relative;
   z-index: 2;
-  transition: transform 500ms cubic-bezier(.13, .53, .38, .97);
+  transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
   animation: pan-image 200s linear infinite;
 
   display: flex;
@@ -44,7 +50,6 @@ main {
 main > header {
   position: relative;
   z-index: 3;
-  text-align: center;
   padding: 3rem;
   margin: 1rem;
   border-radius: 1rem;
@@ -52,9 +57,7 @@ main > header {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  
   white-space: nowrap;
-  text-align: center;
 }
 
 main > header > span {
@@ -65,15 +68,15 @@ main > header > span {
 
 main > header > h1 {
   font-size: 5rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   text-transform: uppercase;
   margin: 0;
   text-shadow: 0px 0px 0.5rem white;
 }
 
-main > header > h1:before, 
+main > header > h1:before,
 main > header > h1:after {
-  content: "";
+  content: '';
   height: 4px;
   width: 4px;
   position: absolute;
@@ -97,7 +100,7 @@ main > header > ul {
   align-items: center;
   gap: 1rem;
   padding: 0;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 main > header > ul > li {
@@ -115,7 +118,7 @@ main > header > ul > li > a {
 
 main > header > ul > li > a:hover {
   transform: scale(1.2);
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 main > header > ul > li > a > svg,
@@ -126,8 +129,8 @@ main > header > ul > li > a > svg > path {
 }
 
 main > .bg-overlay {
-  background-color: rgb(32,39,49);
-  opacity: .8;
+  background-color: rgb(32, 39, 49);
+  opacity: 0.8;
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -153,7 +156,7 @@ main > .bg-overlay {
   margin-top: clamp(2rem, 2vw, 3rem);
   padding: 0rem clamp(1rem, 2vw, 2rem);
   transform: translateY(70%) scale(0.9);
-  transition: transform 500ms cubic-bezier(.13, .53, .38, .97);
+  transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
@@ -164,7 +167,9 @@ main > .bg-overlay {
 }
 
 .scrollbar-hidden::-webkit-scrollbar-thumb {
-  background-color: transparent;
+  width: 0.5rem;
+  background-color: black;
+  border-radius: 3rem;
 }
 
 #nav-toggle {
@@ -213,7 +218,7 @@ main > .bg-overlay {
 }
 
 #nav-links > .nav-link:hover {
-  transform: scale(.95);
+  transform: scale(0.95);
   transition-timing-function: ease;
   transition-duration: 400ms;
 }
@@ -246,7 +251,7 @@ main > .bg-overlay {
 
 .about > h1 {
   font-size: 5rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -258,7 +263,7 @@ main > .bg-overlay {
 
 .about > h1:after {
   display: block;
-  content: "";
+  content: '';
   height: 100px;
   width: 4px;
   background-color: white;
@@ -283,7 +288,7 @@ main > .bg-overlay {
 
 .skills > h1 {
   font-size: 5rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   text-transform: uppercase;
   margin: 0;
   text-shadow: 0px 0px 0.5rem white;
@@ -361,7 +366,6 @@ main > .bg-overlay {
   z-index: 4;
 }
 
-
 .projects > div > div {
   position: absolute;
   display: flex;
@@ -409,7 +413,7 @@ main > .bg-overlay {
 }
 
 .projects > div > div > div > a {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: white;
   color: black;
   margin: 2rem;
@@ -417,7 +421,7 @@ main > .bg-overlay {
 }
 
 .projects > div > div > div > a:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .projects > .one {
@@ -426,7 +430,7 @@ main > .bg-overlay {
   background-position: center;
   position: relative;
   z-index: 3;
-  opacity: .9;
+  opacity: 0.9;
   border-radius: 3rem 0 0 0;
 }
 
@@ -443,7 +447,7 @@ main > .bg-overlay {
   background-position: center;
   position: relative;
   z-index: 3;
-  opacity: .9;
+  opacity: 0.9;
   border-radius: 0 3rem 0 0;
 }
 
@@ -460,7 +464,7 @@ main > .bg-overlay {
   background-position: center;
   position: relative;
   z-index: 3;
-  opacity: .9;
+  opacity: 0.9;
   border-radius: 0 0 0 3rem;
 }
 
@@ -477,7 +481,7 @@ main > .bg-overlay {
   background-position: center;
   position: relative;
   z-index: 3;
-  opacity: .9;
+  opacity: 0.9;
   border-radius: 0 0 3rem 0;
 }
 
@@ -516,7 +520,7 @@ code {
     background-position: 35% 84%;
     background-size: 350%;
   }
-/* View 2 */
+  /* View 2 */
   20.0001% {
     background-position: 72% 5%;
     background-size: 300%;
@@ -547,7 +551,7 @@ code {
     background-size: 350%;
   }
   /* View 5 */
-  80.0001%{
+  80.0001% {
     background-position: 20% 30%;
     background-size: 200%;
   }
@@ -587,22 +591,21 @@ code {
   .projects > div > div > .svgs > svg {
     height: 35px;
     width: 35px;
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
   }
 
   .projects > div > div > div {
-    margin: .3rem;
+    margin: 0.3rem;
   }
 
   .about {
     margin: 0 5%;
   }
-
 }
 
 @media (max-width: 900px) {
   main {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   main > header > h1 {
@@ -629,23 +632,23 @@ code {
   }
 
   .projects > div:hover > div {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .projects > div > div > .svgs > svg {
     height: 20px;
     width: 20px;
-    margin: 0 .3rem;
+    margin: 0 0.3rem;
   }
 
   .projects > div > div > div {
-    margin: .3rem;
+    margin: 0.3rem;
   }
 }
 
 @media (max-width: 700px) {
   main {
-    font-size: .7rem;
+    font-size: 0.7rem;
     overflow: hidden;
   }
 
@@ -658,21 +661,26 @@ code {
   }
 
   main > header > h1 {
-    font-size: 2.3rem;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+  }
+
+  main > header > h3 {
+    font-size: 1rem;
   }
 
   main > header > h1:before {
-    top: 35%;
-    left: 2.2rem;
+    top: 36%;
+    left: 2.4rem;
   }
 
   main > header > h1:after {
-    top: 35%;
-    right: 2.5rem;
+    top: 36%;
+    right: 4.2rem;
   }
 
   main > header > span {
-    font-size:1.8rem;
+    font-size: 1.5rem;
   }
 
   main > header > ul {
@@ -682,14 +690,18 @@ code {
 
   main > header > ul > li > a > svg,
   main > header > ul > li > a > svg > path {
-    height: 30px;
-    width: 30px;
-    padding: .3rem;
+    height: 20px;
+    width: 20px;
+    padding: 0.3rem;
   }
 
   .skills {
-    justify-content: center;
-    font-size: 1rem;
+    justify-content: flex-start;
+  }
+
+  .skills > div > div > ul > li {
+    padding: 0.5rem;
+    white-space: nowrap;
   }
 
   .skills > h1 {
@@ -699,34 +711,43 @@ code {
   .projects {
     grid-template-columns: repeat(4, 100vw);
     grid-template-rows: 1fr;
-    height: 80vh;
-    padding-bottom: 12rem;
+    min-height: fit-content;
     width: 100vw;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
 
+  .projects::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: transparent;
+  }
+
+  .projects::-webkit-scrollbar-thumb {
+    width: 0.5rem;
+    background-color: white;
+    border-radius: 3rem;
+  }
+
   .projects > .one,
-  .projects > .two, 
+  .projects > .two,
   .projects > .three,
   .projects > .four {
+    height: 52vh;
     border-radius: 0rem;
     scroll-snap-align: start;
-    padding: 0 1rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .projects > .one:hover,
-  .projects > .two:hover, 
+  .projects > .two:hover,
   .projects > .three:hover,
   .projects > .four:hover {
-    background-color: trasnparent;
+    background-color: transparent;
     border: none;
   }
-  
 
   .projects > h1 {
     opacity: 1;
@@ -742,11 +763,66 @@ code {
   .projects > div > div > .svgs > svg {
     height: 30px;
     width: 30px;
-    margin: 0 .2rem;
+    margin: 0 0.2rem;
   }
 
   .projects > div > div > div {
-    margin: .3rem;
+    margin: 0.3rem;
   }
 }
 
+@media (max-width: 500px) {
+  main > header > h1:before,
+  main > header > h1:after {
+    height: 2px;
+    width: 2px;
+    border: 1px solid white;
+    border-radius: 1px;
+  }
+
+  main > header > span {
+    font-size: 1rem;
+  }
+
+  main > header > h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  main > header > h3 {
+    font-size: 0.55rem;
+  }
+
+  main > header > h1:before {
+    top: 37%;
+    left: 2.4rem;
+  }
+
+  main > header > h1:after {
+    top: 37%;
+    right: 5.5rem;
+  }
+
+  #nav-links > .nav-link > .nav-link-image {
+    width: max(20vw, 250px);
+    aspect-ratio: 1.8 / 1;
+    border-radius: 0.5rem;
+    margin-top: 0.75rem;
+    object-fit: cover;
+    margin: 1rem;
+  }
+
+  #nav-toggle {
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .about > h1 {
+    font-size: 3rem;
+  }
+
+  .about > p {
+    font-size: 1rem;
+  }
+}
