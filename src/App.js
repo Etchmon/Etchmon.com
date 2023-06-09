@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import imgSrc1 from '../src/images/localhost_3000_.png';
@@ -12,13 +12,8 @@ import About from './components/about';
 
 function App() {
 
-  const [pageLoad, setPageLoad] = useState(false)
   const scrollableRef = useRef(null);
   const [activeComponent, setActiveComponent] = useState('home');
-
-  useEffect(() => {
-    window.onload = setPageLoad(true);
-  })
 
   const toggleNav = () => {
     document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
